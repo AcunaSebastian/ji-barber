@@ -1,7 +1,7 @@
 import { MongoClient, Db } from "mongodb";
 
 const uri = process.env.MONGODB_URI as string;
-const dbName = "corvus-barber";
+const dbName = process.env.MONGODB_DB_NAME || "corvus-barber";
 
 
 let client: MongoClient;

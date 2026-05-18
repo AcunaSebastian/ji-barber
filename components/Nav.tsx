@@ -1,7 +1,7 @@
 import { BarberShop } from "@/lib/intefaces"
 
 interface Props {
-  barbershop: BarberShop,
+  barbershop: BarberShop | null,
 }
 export default function Nav({ barbershop }: Props) {
 
@@ -9,9 +9,9 @@ export default function Nav({ barbershop }: Props) {
 
   return <nav className="nav">
     <a className="nav-brand" href="#top">
-      <img src={`${barbershop.logo}`} alt={barbershop.name} />
+      {barbershop?.logo && <img src={barbershop.logo} alt={barbershop.name} />}
       <div>
-        <div className="name">{barbershop.name}</div>
+        <div className="name">{barbershop?.name}</div>
         <span className="sub">EST · COMPANY</span>
       </div>
     </a>

@@ -8,7 +8,7 @@ export default async function Home() {
   const barbershnop = await getBarberShopById();
 
   return (<>
-    <Nav barbershop={barbershnop!} />
+    <Nav barbershop={barbershnop} />
     <header id="top" className="hero">
       <div className="hero-meta-top">
         <span className="mono">EST · COMPANY</span>
