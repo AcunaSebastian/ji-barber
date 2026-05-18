@@ -23,7 +23,7 @@ export default function Nav({ barbershop }: Props) {
       <a href="#contact">Contacto</a>
     </div>
 
-    <a className="nav-cta" data-reserve href="#" target="_blank" rel="noopener">
+    <a className="nav-cta" data-reserve href={barbershop?.bookingUrl || "#"} target="_blank" rel="noopener">
       Reservar <span className="arrow">→</span>
     </a>
   </nav>

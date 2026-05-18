@@ -25,6 +25,7 @@ export interface BarberShop {
   local: string;
   city: string;
   country: string;
+  bookingUrl: string;
   businessHours: BusinessHour[];
   socials: {
     instagram?: SocialLink;

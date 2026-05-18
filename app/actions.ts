@@ -63,6 +63,9 @@ export async function getBarberShopById(): Promise<BarberShop | null> {
 
     if (!data) return null;
 
+    const baseUrl = process.env.CORVUS_BARBER_BASE_URL || "";
+    const slug = data.slug || "";
+
     return {
       gallery: data.galleryUrls || [],
       name: data.name || "",
@@ -71,6 +74,7 @@ export async function getBarberShopById(): Promise<BarberShop | null> {
       local: data?.local || "",
       city: data?.city || "",
       country: data?.country || "",
+      bookingUrl: slug ? `${baseUrl}/${slug}` : "",
       businessHours: (data?.businessHours || []) as BusinessHour[],
       socials: {
         instagram: buildSocial(data.instagramHandle, data.instagramUrl, data.instagram),

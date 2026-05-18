@@ -32,7 +32,7 @@ export default async function Home() {
           Solo el corte que tu cabeza pide.
         </p>
         <div className="hero-actions">
-          <a className="btn btn-primary" data-reserve href="#" target="_blank" rel="noopener">
+          <a className="btn btn-primary" data-reserve href={barbershnop?.bookingUrl || "#"} target="_blank" rel="noopener">
             Reservar turno <span className="arrow">→</span>
           </a>
           <a className="btn btn-ghost" href="#services">Ver servicios</a>
@@ -252,7 +252,7 @@ export default async function Home() {
 
       <div className="cta-band">
         <h3>Tu silla<br />te espera.</h3>
-        <a className="btn-band" data-reserve href="#" target="_blank" rel="noopener">
+        <a className="btn-band" data-reserve href={barbershnop?.bookingUrl || "#"} target="_blank" rel="noopener">
           Reservar ahora <span>→</span>
         </a>
       </div>
