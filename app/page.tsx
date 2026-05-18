@@ -2,6 +2,8 @@ import Nav from "@/components/Nav";
 import { HoursWidget } from "./_components/hours-widget";
 import { getBarberShopById, getServices } from "./actions";
 
+export const revalidate = 60;
+
 export default async function Home() {
 
   const services = await getServices();
