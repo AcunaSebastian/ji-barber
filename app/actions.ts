@@ -66,7 +66,7 @@ export async function getBarberShopById(): Promise<BarberShop | null> {
     return {
       gallery: data.galleryUrls || [],
       name: data.name || "",
-      logo: data.logoUrl || "",
+      logo: data?.logoUrl || "",
       street: data?.street || "",
       local: data?.local || "",
       city: data?.city || "",
